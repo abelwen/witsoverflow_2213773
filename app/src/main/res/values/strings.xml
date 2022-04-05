@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">witsoverflow</string>
+    <string name="todo">TODO</string>
+    <string name="wits1">TODO</string>
+    <string name="quot_register_quot">\"Register\"</string>
+    <string name="quot_log_in_quot">\"Log In\"</string>
+</resources>
