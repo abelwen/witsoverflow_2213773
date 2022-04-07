@@ -20,29 +20,26 @@
 
     <Button
         android:id="@+id/signin"
-        android:layout_width="117dp"
-        android:layout_height="51dp"
+        android:layout_width="181dp"
+        android:layout_height="48dp"
         android:text="Log In"
         app:layout_constraintBottom_toBottomOf="@+id/signin_page0"
         app:layout_constraintEnd_toStartOf="@+id/signup"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.888" />
 
     <Button
         android:id="@+id/signup"
-        android:layout_width="110dp"
+        android:layout_width="181dp"
         android:layout_height="48dp"
-        android:background="@android:color/white"
         android:text="Register"
-        android:textColor="#757575"
         app:layout_constraintBottom_toBottomOf="@+id/signin_page0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
+        app:layout_constraintVertical_bias="0.887" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

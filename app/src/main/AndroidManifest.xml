@@ -8,19 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Witsoverflow">
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".ProfileUI"
+            android:name=".Reset_Password"
             android:exported="false" />
-        <activity
-            android:name=".Home"
-            android:exported="false" />
-        <activity
-            android:name=".SignUp"
-            android:exported="false" />
-        <activity
-            android:name=".SignIn"
-            android:exported="false" />
+        <activity android:name=".Home" />
+        <activity android:name=".ProfileUI" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".SignUp" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

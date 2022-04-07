@@ -31,7 +31,7 @@
                 android:background="@drawable/circle"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_user" />
+                app:srcCompat="@drawable/ic_user" />
         </RelativeLayout>
 
         <TextView
@@ -68,7 +68,7 @@
             android:layout_marginRight="15dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_settings" />
+            app:srcCompat="@drawable/ic_settings" />
 
     </RelativeLayout>
 
