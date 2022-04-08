@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),
                 "Redirecting...",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, SignUp.class);
+        
         startActivity(intent);
     }
 }
