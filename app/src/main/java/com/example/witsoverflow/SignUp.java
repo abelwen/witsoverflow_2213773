@@ -117,7 +117,7 @@ public class SignUp extends AppCompatActivity {
         
           //checking whether a number is present in the password entered
          else if(!password.getText().toString().matches(".*[0-9].*"){
-            password.setError("Password must have a number?");
+            password.setError("Password must have a number!");
              return false;
          }
                  
