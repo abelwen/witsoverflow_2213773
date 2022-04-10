@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import.java.util.regex.Matcher; //Abelwe Code
+import.java.util.regex.Pattern; //Abelwe Code
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -70,6 +72,7 @@ public class SignUp extends AppCompatActivity {
     }
 
     boolean checkDataEntered() {
+        Pattern UpperCasePattern = Pattern.compile("[A-Z]");  // Abelwe Code
         if (isEmpty(name)) {
             name.setError("First name is required!");
             return false;
@@ -105,6 +108,11 @@ public class SignUp extends AppCompatActivity {
         else if (password.getText().toString().length()<4 || re_password.getText().toString().length()<4) {
             password.setError("Password must be at least 4 chars long!");
             return false;
+        }
+        else if (!UpperCasePattern.matcher(password).find())
+        {
+            //Trying to make sure the passwords have a number and special character 
+            password.setError("Enter a special character");
         }
         else{
             return true;
