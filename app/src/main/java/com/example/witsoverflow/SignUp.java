@@ -115,7 +115,7 @@ public class SignUp extends AppCompatActivity {
             password.setError("Enter a special character");
             return false;
         }
-        else if(!password.getText().toString().matches(".*[0-9]*.)){
+        else if(!password.getText().toString().matches(".*[0-9].*")){
             password.setError("Password must have a number!");
             return false;
         }                                             
