@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import.java.util.regex.Matcher; //Abelwe Code
-import.java.util.regex.Pattern; //Abelwe Code
+import java.util.regex.Matcher; //Abelwe Code
+import java.util.regex.Pattern; //Abelwe Code
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -109,10 +109,11 @@ public class SignUp extends AppCompatActivity {
             password.setError("Password must be at least 4 chars long!");
             return false;
         }
-        else if (!UpperCasePattern.matcher(password).find())
+        else if (!UpperCasePattern.matcher(password.getText().toString()).find())
         {
             //Trying to make sure the passwords have a number and special character 
             password.setError("Enter a special character");
+            return false;
         }
         
           //checking whether a number is present in the password entered
