@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import.java.util.regex.Matcher; //Abelwe Code
-import.java.util.regex.Pattern; //Abelwe Code
+import java.util.regex.Matcher; //Abelwe Code
+import java.util.regex.Pattern; //Abelwe Code
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -115,6 +115,10 @@ public class SignUp extends AppCompatActivity {
             password.setError("Enter a special character");
             return false;
         }
+        else if(!password.getText().toString().matches(".*[0-9]*.)){
+            password.setError("Password must have a number!");
+            return false;
+        }                                             
         
         //String pass = password.getText().toString();
         // for special characters
