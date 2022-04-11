@@ -109,7 +109,7 @@ public class SignUp extends AppCompatActivity {
             password.setError("Password must be at least 8 chars long!");
             return false;
         }
-        else if (!UpperCasePattern.matcher(password).find())
+        else if (!UpperCasePattern.matcher(password.getText().toString()).find())
         {
             //Trying to make sure the passwords have a number and special character 
             password.setError("Enter a special character");
