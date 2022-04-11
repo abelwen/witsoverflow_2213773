@@ -49,8 +49,8 @@ public class SignIn extends AppCompatActivity {
             password.setError("Enter your password to log in!");
             isValid = false;
         }
-        else if (password.getText().toString().length()<4) {
-                password.setError("Password must be at least 4 chars long!");
+        else if (password.getText().toString().length()<8) {
+                password.setError("Password must be at least 8 chars long!");
                 isValid = false;
         }
         if(isValid){
