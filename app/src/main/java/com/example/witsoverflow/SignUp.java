@@ -134,6 +134,7 @@ public class SignUp extends AppCompatActivity {
               || password.getText().toString().contains(">") || password.getText().toString().contains("?")
               || password.getText().toString().contains("|"))) {
             
+            //Shows error 
             password.setError("Enter a special character");
             return false;
         }
