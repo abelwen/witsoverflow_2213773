@@ -113,6 +113,25 @@ public class SignUp extends AppCompatActivity {
         {
             //Trying to make sure the passwords have a number and special character 
             password.setError("Enter a special character");
+            return false;
+        }
+        
+        //String pass = password.getText().toString();
+        // for special characters
+        else if (!(password.getText().toString().contains("@") || password.getText().toString().contains("#")
+              || password.getText().toString().contains("!") || password.getText().toString().contains("~")
+              || password.getText().toString().contains("$") || password.getText().toString().contains("%")
+              || password.getText().toString().contains("^") || password.getText().toString().contains("&")
+              || password.getText().toString().contains("*") || password.getText().toString().contains("(")
+              || password.getText().toString().contains(")") || password.getText().toString().contains("-")
+              || password.getText().toString().contains("+") || password.getText().toString().contains("/")
+              || password.getText().toString().contains(":") || password.getText().toString().contains(".")
+              || password.getText().toString().contains(", ") || password.getText().toString().contains("<")
+              || password.getText().toString().contains(">") || password.getText().toString().contains("?")
+              || password.getText().toString().contains("|"))) {
+            
+            password.setError("Enter a special character");
+            return false;
         }
         else{
             return true;
