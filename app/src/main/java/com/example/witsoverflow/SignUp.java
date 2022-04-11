@@ -45,7 +45,7 @@ public class SignUp extends AppCompatActivity {
     }
     public void checkUserData(){
         boolean isValid = true;
-        if (password.getText().toString().equals(re_password.getText().toString())) {
+        if (!password.getText().toString().equals(re_password.getText().toString())) {
                 password.setError("Password and Re-enter Password must match!");
                 isValid = false;
         }
