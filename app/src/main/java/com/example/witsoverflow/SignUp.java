@@ -45,8 +45,8 @@ public class SignUp extends AppCompatActivity {
     }
     public void checkUserData(){
         boolean isValid = true;
-        if (password.getText().toString().equals(re_password.getText().toString())) {
-                password.setError("Password and Re-enter Password must match!");
+        if (password.getText().toString().equals(re_password.getText().toString())) { //checks if password and re-enter match
+                password.setError("Password and Re-enter Password must match!"); 
                 isValid = false;
         }
         if(isValid && checkDataEntered()){
@@ -73,40 +73,40 @@ public class SignUp extends AppCompatActivity {
 
     boolean checkDataEntered() {
         Pattern UpperCasePattern = Pattern.compile("[A-Z]");  // Abelwe Code
-        if (isEmpty(name)) {
+        if (isEmpty(name)) { //checks if name is empty
             name.setError("First name is required!");
             return false;
         }
-        else if (isEmpty(address)) {
+        else if (isEmpty(address)) { //checks if address is empty
             address.setError("Address is required!");
             return false;
         }
-        else if (isEmpty(cell_num)) {
+        else if (isEmpty(cell_num)) { //checks if cell number is empty
             cell_num.setError("Cellphone number is required!");
             return false;
         }
-        else if (isEmpty(stu_num)) {
+        else if (isEmpty(stu_num)) { //checks if student number is empty
             surname.setError("Student number is required!");
             return false;
         }
-        else if (isEmpty(password)) {
+        else if (isEmpty(password)) { //checks if password is empty
             password.setError("Password is required!");
             return false;
         }
-        else if (isEmpty(re_password)) {
+        else if (isEmpty(re_password)) { //checks if re-enter password is empty
             re_password.setError("Re-enter is required!");
             return false;
         }
-        else if (isEmpty(surname)) {
+        else if (isEmpty(surname)) { //checks if surname is empty
             surname.setError("Last name is required!");
             return false;
         }
-        else if (!isEmail(email)) {
+        else if (!isEmail(email)) { //checks if email is empty
             email.setError("Enter valid email!");
             return false;
         }
-        else if (password.getText().toString().length()<4 || re_password.getText().toString().length()<4) {
-            password.setError("Password must be at least 4 chars long!");
+        else if (password.getText().toString().length()<8 || re_password.getText().toString().length()<8) {
+            password.setError("Password must be at least 8 chars long!");
             return false;
         }
         else if (!UpperCasePattern.matcher(password).find())
