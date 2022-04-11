@@ -45,7 +45,7 @@ public class SignUp extends AppCompatActivity {
     }
     public void checkUserData(){
         boolean isValid = true;
-        if (password.getText().toString().equals(re_password.getText().toString())) {
+        if (password.getText().toString().equals(re_password.getText().toString())) { //checks if the password matches the re-enter
                 password.setError("Password and Re-enter Password must match!");
                 isValid = false;
         }
@@ -73,35 +73,35 @@ public class SignUp extends AppCompatActivity {
 
     boolean checkDataEntered() {
         Pattern UpperCasePattern = Pattern.compile("[A-Z]");  // Abelwe Code
-        if (isEmpty(name)) {
+        if (isEmpty(name)) { //checks if name is entered
             name.setError("First name is required!");
             return false;
         }
-        else if (isEmpty(address)) {
+        else if (isEmpty(address)) {  //checks if address is entered
             address.setError("Address is required!");
             return false;
         }
-        else if (isEmpty(cell_num)) {
+        else if (isEmpty(cell_num)) {  //checks if cell number is entered
             cell_num.setError("Cellphone number is required!");
             return false;
         }
-        else if (isEmpty(stu_num)) {
+        else if (isEmpty(stu_num)) {  //checks if student number is entered
             surname.setError("Student number is required!");
             return false;
         }
-        else if (isEmpty(password)) {
+        else if (isEmpty(password)) {  //checks if password is entered
             password.setError("Password is required!");
             return false;
         }
-        else if (isEmpty(re_password)) {
+        else if (isEmpty(re_password)) {  //checks if re-entere password is entered
             re_password.setError("Re-enter is required!");
             return false;
         }
-        else if (isEmpty(surname)) {
+        else if (isEmpty(surname)) {  //checks if surname is entered
             surname.setError("Last name is required!");
             return false;
         }
-        else if (!isEmail(email)) {
+        else if (!isEmail(email)) {  //checks if email is entered
             email.setError("Enter valid email!");
             return false;
         }
