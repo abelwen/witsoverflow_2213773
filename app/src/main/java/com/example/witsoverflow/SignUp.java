@@ -45,7 +45,10 @@ public class SignUp extends AppCompatActivity {
     }
     public void checkUserData(){
         boolean isValid = true;
-        if (!password.getText().toString().equals(re_password.getText().toString())) { //checks if the password matches the re-enter
+
+        //checks if the password matches the re-enter
+      if (!password.getText().toString().equals(re_password.getText().toString())) {
+
                 password.setError("Password and Re-enter Password must match!");
                 isValid = false;
         }
@@ -114,6 +117,7 @@ public class SignUp extends AppCompatActivity {
             //Trying to make sure the passwords have a number and special character 
             password.setError("Enter a special character");
             return false;
+
         }
         else if(!password.getText().toString().matches(".*[0-9].*")){
             password.setError("Password must have a number!");
@@ -132,12 +136,22 @@ public class SignUp extends AppCompatActivity {
               || password.getText().toString().contains(":") || password.getText().toString().contains(".")
               || password.getText().toString().contains(", ") || password.getText().toString().contains("<")
               || password.getText().toString().contains(">") || password.getText().toString().contains("?")
-              || password.getText().toString().contains("|"))) {
+              || password.getText().toString().contains("|"))) 
+        {
             
             //Shows error 
             password.setError("Enter a special character");
             return false;
         }
+
+        
+        
+          //checking whether a number is present in the password entered
+         else if(!password.getText().toString().matches(".*[0-9].*"){
+            password.setError("Password must have a number!");
+             return false;
+         }
+                 
         else{
             return true;
         }
