@@ -45,7 +45,10 @@ public class SignUp extends AppCompatActivity {
     }
     public void checkUserData(){
         boolean isValid = true;
-        if (!password.getText().toString().equals(re_password.getText().toString())) {
+
+        //checks if the password matches the re-enter
+      if (!password.getText().toString().equals(re_password.getText().toString())) {
+
                 password.setError("Password and Re-enter Password must match!");
                 isValid = false;
         }
@@ -73,40 +76,40 @@ public class SignUp extends AppCompatActivity {
 
     boolean checkDataEntered() {
         Pattern UpperCasePattern = Pattern.compile("[A-Z]");  // Abelwe Code
-        if (isEmpty(name)) {
+        if (isEmpty(name)) { //checks if name is entered
             name.setError("First name is required!");
             return false;
         }
-        else if (isEmpty(address)) {
+        else if (isEmpty(address)) {  //checks if address is entered
             address.setError("Address is required!");
             return false;
         }
-        else if (isEmpty(cell_num)) {
+        else if (isEmpty(cell_num)) {  //checks if cell number is entered
             cell_num.setError("Cellphone number is required!");
             return false;
         }
-        else if (isEmpty(stu_num)) {
+        else if (isEmpty(stu_num)) {  //checks if student number is entered
             surname.setError("Student number is required!");
             return false;
         }
-        else if (isEmpty(password)) {
+        else if (isEmpty(password)) {  //checks if password is entered
             password.setError("Password is required!");
             return false;
         }
-        else if (isEmpty(re_password)) {
+        else if (isEmpty(re_password)) {  //checks if re-entere password is entered
             re_password.setError("Re-enter is required!");
             return false;
         }
-        else if (isEmpty(surname)) {
+        else if (isEmpty(surname)) {  //checks if surname is entered
             surname.setError("Last name is required!");
             return false;
         }
-        else if (!isEmail(email)) {
+        else if (!isEmail(email)) {  //checks if email is entered
             email.setError("Enter valid email!");
             return false;
         }
-        else if (password.getText().toString().length()<4 || re_password.getText().toString().length()<4) {
-            password.setError("Password must be at least 4 chars long!");
+        else if (password.getText().toString().length()<8 || re_password.getText().toString().length()<8) {
+            password.setError("Password must be at least 8 chars long!");
             return false;
         }
         else if (!UpperCasePattern.matcher(password.getText().toString()).find())
@@ -114,7 +117,34 @@ public class SignUp extends AppCompatActivity {
             //Trying to make sure the passwords have a number and special character 
             password.setError("Enter a special character");
             return false;
+
         }
+        else if(!password.getText().toString().matches(".*[0-9].*")){
+            password.setError("Password must have a number!");
+            return false;
+        }                                             
+        
+        //String pass = password.getText().toString();
+        // for special characters
+        else if (!(password.getText().toString().contains("@") || password.getText().toString().contains("#")
+              || password.getText().toString().contains("!") || password.getText().toString().contains("~")
+              || password.getText().toString().contains("$") || password.getText().toString().contains("%")
+              || password.getText().toString().contains("^") || password.getText().toString().contains("&")
+              || password.getText().toString().contains("*") || password.getText().toString().contains("(")
+              || password.getText().toString().contains(")") || password.getText().toString().contains("-")
+              || password.getText().toString().contains("+") || password.getText().toString().contains("/")
+              || password.getText().toString().contains(":") || password.getText().toString().contains(".")
+              || password.getText().toString().contains(", ") || password.getText().toString().contains("<")
+              || password.getText().toString().contains(">") || password.getText().toString().contains("?")
+              || password.getText().toString().contains("|"))) 
+        {
+            
+            //Shows error 
+            password.setError("Enter a special character");
+            return false;
+        }
+
+        
         
           //checking whether a number is present in the password entered
          else if(!password.getText().toString().matches(".*[0-9].*"){
