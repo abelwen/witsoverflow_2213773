@@ -1,5 +1,8 @@
 # witsoverflow_2213773
 
+[![Build Status](https://travis-ci.org/azu/travis-badge.svg?branch=master)](https://travis-ci.org/azu/travis-badge)
+
+
 In this project we will be designing and implementing an online forum for the school of CSAM. In the vein of other such forums such as StackOverFlow. Among other features , users should be able to 
 
 Answer and ask questions
