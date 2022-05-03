@@ -5,7 +5,7 @@ env:
   global:
     - ANDROID_API_LEVEL=25
     - ANDROID_BUILD_TOOLS_VERSION=25.0.0
-    - CODECOV_TOKEN='4ebb17a9-ca4d-43b5-8138-9c3fd5268c5b' #
+    - CODECOV_TOKEN='47de6975-4cd4-43bc-bb49-db99a50fbb89' #
 
 android:
   components:
