@@ -29,8 +29,8 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew assembleDebug
-  - ./gradlew createDebugCoverageReport #
+#   - ./gradlew assembleDebug
+#   - ./gradlew createDebugCoverageReport #
   - echo "Travis branch is $TRAVIS_BRANCH"
   - echo "Travis branch is in pull request $TRAVIS_PULL+REQUEST"
 
