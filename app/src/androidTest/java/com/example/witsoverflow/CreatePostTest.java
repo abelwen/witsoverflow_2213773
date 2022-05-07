@@ -18,7 +18,7 @@ public class CreatePostTest {
 
 
     @Rule
-    public ActivityScenarioRule<CreatePost> tCreatePostScenarioRule = new ActivityScenarioRule<CreatePost>(CreatePost.class);
+    public ActivityScenarioRule<CreatePost> tCreatePostScenarioRule = new ActivityScenarioRule<CreatPost>(CreatePost.class);
 
     private ActivityScenario<CreatePost> tCreatePost = null;
 
