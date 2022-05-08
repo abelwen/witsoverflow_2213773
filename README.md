@@ -13,3 +13,13 @@ Moderate asnwers and questions ( moderator)
 Earn acheivemenrs for participating in the forum
 
 We will make use of JAVA during this project
+
+Features
+* A registration page with validation checks
+* A login page
+* A personal profile page where they can view their personal details
+* A home page where they can view all the posts created
+* A plus button that redirects to a page where you can create a post
+* Voting on a post
+* Sorting A Post
+* 
