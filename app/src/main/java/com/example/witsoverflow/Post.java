@@ -34,8 +34,5 @@ public class Post {
         return downvote;
     }
 
-    public String getPost() {
-
-        return post;
-    }
+    
 }
