@@ -36,3 +36,8 @@ behavior: default
 require_changes: no
 
 curl --data-binary @- https://codecov.io/validate
+
+$ProgressPreference = 'SilentlyContinue'
+Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe 
+-Outfile codecov.exe
+ .\codecov.exe -t ${47de6975-4cd4-43bc-bb49-db99a50fbb89}
