@@ -10,81 +10,89 @@
         android:id="@+id/imageView"
         android:layout_width="409dp"
         android:layout_height="729dp"
-        android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/signinup" />
 
-    <EditText
-        android:id="@+id/rp_email"
-        android:layout_width="407dp"
-        android:layout_height="61dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#009688"
+        android:text="Sign In"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.074" />
-
-    <EditText
-        android:id="@+id/rp_password"
-        android:layout_width="405dp"
-        android:layout_height="68dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/rp_email"
-        app:layout_constraintVertical_bias="0.026" />
-
-    <Button
-        android:id="@+id/rp_Reset"
-        android:layout_width="405dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="3dp"
-        android:text="Sign In"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rp_password"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintTop_toBottomOf="@+id/log_password"
+        app:layout_constraintVertical_bias="0.09" />
 
     <TextView
-        android:id="@+id/resetPassword"
+        android:id="@+id/log_reset"
         android:layout_width="213dp"
         android:layout_height="29dp"
-        android:layout_marginTop="48dp"
         android:text="Forgot password?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rp_Reset"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/log_in"
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
-        android:id="@+id/Text_signup"
+        android:id="@+id/log_signup"
         android:layout_width="180dp"
         android:layout_height="27dp"
         android:layout_marginTop="48dp"
         android:layout_marginBottom="385dp"
-        android:text="                             SignUp"
+        android:text="                            Sign Up"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/resetPassword"
-        app:layout_constraintTop_toBottomOf="@+id/rp_Reset"
+        app:layout_constraintStart_toEndOf="@+id/log_reset"
+        app:layout_constraintTop_toBottomOf="@+id/log_in"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/Stud_Num"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint="Student Number"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <EditText
+        android:id="@+id/log_password"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stud_Num" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
