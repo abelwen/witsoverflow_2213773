@@ -49,7 +49,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     
         TextView post, username, up, down;
 
-        
+        public MyViewHolder(@NonNull View itemView){
+            super(itemView);
+            username = itemView.findViewById(R.id.userName);
+            post = itemView.findViewById(R.id.post);
+            up = itemView.findViewById(R.id.upVoteNo);
+            down = itemView.findViewById(R.id.downVoteNo);
+        }
     }
 
 }
