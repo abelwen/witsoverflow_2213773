@@ -17,8 +17,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     ArrayList<Post> list;
 
     public MyAdapter(Context context, ArrayList<Post> list) {
+         this.list = list;
         this.context = context;
-        this.list = list;
+       
     }
 
     @NonNull
@@ -30,10 +31,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) { //sets 
-
-        Post pst = list.get(position);
         String x,y;
-
+        Post pst = list.get(position);
         holder.username.setText(pst.getusername());
         holder.post.setText(pst.getPost());
         holder.up.setText((String.valueOf(pst.getUpvote())));
@@ -51,10 +50,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            username = itemView.findViewById(R.id.userName);
-            post = itemView.findViewById(R.id.post);
+
             up = itemView.findViewById(R.id.upVoteNo);
             down = itemView.findViewById(R.id.downVoteNo);
+            username = itemView.findViewById(R.id.userName);
+            post = itemView.findViewById(R.id.post);
         }
     }
 
