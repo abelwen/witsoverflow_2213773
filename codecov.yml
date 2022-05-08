@@ -2,8 +2,7 @@
 
 codecov:
 
-token: 47de6975-4cd4-43bc-bb49-db99a50fbb89
-
+#token: 47de6975-4cd4-43bc-bb49-db99a50fbb89
 #require_ci_to_pass: yes
 
 coverage:
