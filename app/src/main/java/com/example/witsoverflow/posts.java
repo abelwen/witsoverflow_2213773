@@ -59,7 +59,6 @@ public class posts extends AppCompatActivity {
         });
         
         BottomNavigationView bottomNavigationView = findViewById(R.id.Bottom_nav);
-
         bottomNavigationView.setSelectedItemId(R.id.myProfile);
 
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
