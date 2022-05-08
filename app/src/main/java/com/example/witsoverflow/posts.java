@@ -57,3 +57,49 @@ public class posts extends AppCompatActivity {
                 startActivity(switchActivityIntent);
             }
         });
+        
+        BottomNavigationView bottomNavigationView = findViewById(R.id.Bottom_nav);
+
+        bottomNavigationView.setSelectedItemId(R.id.myProfile);
+
+        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                Intent switchActivityIntent = new Intent(posts.this,ProfileUI.class);
+                switchActivityIntent.putExtra("Stud_Num",Student_num);
+                startActivity(switchActivityIntent);
+            }
+        });
+
+
+        //database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://witsoverflow-c83b5-default-rtdb.europe-west1.firebasedatabase.app/");
+        database = FirebaseDatabase.getInstance().getReference("Posts");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<>();
+        myAdapter = new MyAdapter(this,list);
+        recyclerView.setAdapter(myAdapter);
+
+
+
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    Post post1 = dataSnapshot.getValue(Post.class);
+                    list.add(post1);
+                }
+                myAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+}
