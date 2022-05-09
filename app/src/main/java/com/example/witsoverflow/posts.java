@@ -34,7 +34,7 @@ public class posts extends AppCompatActivity {
     //FirebaseDatabase firebaseDatabase;
 
     RecyclerView recyclerView;
-    MyAdapter myAdapter;
+    MyAdapter myAdapter;    //For displaying on items? runs many times
     ArrayList<Post> list;
     ImageButton add, mypro;
     SearchView tags;
