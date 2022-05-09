@@ -28,12 +28,28 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Vote extends AppCompatActivity{
     private ImageButton upVBtn, dnVBtn;
     private TextView txtUsername;
+  
+    /*
+    String id;
+    List plist;
+    int postIndex;
+    
+    public Vote(int idx, List ls){
+        this.postIndex = idx;
+        this.plist = ls;
+        //this.id = plist.get(postIndex);
+    }
+    
+    public void setId(){
+        this.id = plist.get(postIndex);
+    }
+    */
 
     //variable stores the updated number of votes.
     private  int newNumVotes;
 
     // creating a variable for firebasefirestore.
-    private FirebaseFirestore db;
+    //private FirebaseFirestore db;
 
     //function increases number of votes  
     public int AddVote(int numVotes){
