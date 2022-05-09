@@ -168,6 +168,16 @@ public class Vote extends AppCompatActivity{
 
                         }
                       
+                         
+                     /*  if(snapshot.hasChild(Student_num)){
+                            //student number exist in firebase database
+                            int NoOfUpVts= snapshot.child(Student_num).child("upvote").getValue(Integer.class);
+                            
+                            vf.setDnVotes(NoOfUpVts);
+                            newNumVotes = vf.i_downvotes();
+                        }
+                        }*/
+                      
                         /*
                         if(snapshot.hasChild(id)){
                             //student number exist in firebase database
