@@ -41,7 +41,11 @@ public class Vote extends AppCompatActivity{
     }
     
     public void setId(){
-        this.id = plist.get(postIndex);
+        id = plist.get(postIndex);
+    }
+    
+    public string getId(){
+        return id;
     }
     */
 
