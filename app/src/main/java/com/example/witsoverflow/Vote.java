@@ -55,7 +55,7 @@ public class Vote extends AppCompatActivity{
     // creating a variable for firebasefirestore.
     //private FirebaseFirestore db;
 
-    //function increases number of votes  
+    //function increases number of votes       -//or use Votingfunctions constructor
     public int AddVote(int numVotes){
         int tVotes=0;
         tVotes = numVotes + 1;
