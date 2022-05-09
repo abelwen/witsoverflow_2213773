@@ -4,10 +4,15 @@ public class VotingFunctions {
     public int upVotes;
     public int dnVotes;
 
-    public VotingFunctions(int upVotes, int dnVotes) {  //constructor
+    public VotingFunctions(int upVotes, int dnVotes) {  //constructor 1.
         this.upVotes = upVotes;
         this.dnVotes = dnVotes;
     }
+  
+  
+    public VotingFunctions(){ //constructor 2.
+    }
+  
 
     public int getUpVotes() {   //returns the up vote
         return upVotes;
