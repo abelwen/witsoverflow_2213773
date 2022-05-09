@@ -13,7 +13,7 @@ public class VotingFunctions {
         return upVotes;
     }
 
-    public void setUpVotes(int upVotes) {   //sets the up vote  
+    public void setUpVotes(int upVotes) {   //sets the up vote  - can use constructor instead
         this.upVotes = upVotes;
     }
 
@@ -21,7 +21,7 @@ public class VotingFunctions {
         return dnVotes;
     }
 
-    public void setDnVotes(int dnVotes) {   //sets the down votes
+    public void setDnVotes(int dnVotes) {   //sets the down votes   - can use constructor instead
         this.dnVotes = dnVotes;
     }
 
