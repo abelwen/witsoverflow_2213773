@@ -78,7 +78,7 @@ public class Vote extends AppCompatActivity{
         txtUsername = findViewById(R.id.userName);
 
         //database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://witsoverflow-c83b5-default-rtdb.europe-west1.firebasedatabase.app/");
-        
+      
         //when up vote clicked
         upVBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +96,16 @@ public class Vote extends AppCompatActivity{
                             newNumVotes = AddVote(NoOfUpVts);
 
                         }
+                      
+                        /*
+                        if(snapshot.hasChild(id)){
+                            //student number exist in firebase database
+                            int NoOfUpVts= snapshot.child(id).child("upvote").getValue(Integer.class);
+
+                            newNumVotes = AddVote(NoOfUpVts);
+
+                        }
+                        */
                     }
 
                     @Override
@@ -137,6 +147,16 @@ public class Vote extends AppCompatActivity{
                             newNumVotes = AddVote(NoOfUpVts);
 
                         }
+                      
+                        /*
+                        if(snapshot.hasChild(id)){
+                            //student number exist in firebase database
+                            int NoOfUpVts= snapshot.child(id).child("downvote").getValue(Integer.class);
+
+                            newNumVotes = AddVote(NoOfUpVts);
+
+                        }
+                        */
                     }
 
                     @Override
