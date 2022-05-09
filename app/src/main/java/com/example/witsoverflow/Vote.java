@@ -61,6 +61,14 @@ public class Vote extends AppCompatActivity{
         tVotes = numVotes + 1;
         return tVotes;
     }
+  
+  
+  /*  
+   Votingfunctions vf = new Votingfunctions();
+  
+  */
+  
+  
 
     @SuppressLint("WrongViewCast")
     @Override
