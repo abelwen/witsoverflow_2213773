@@ -63,10 +63,12 @@ public class Vote extends AppCompatActivity{
     }
   
   
-  /*  
-   Votingfunctions vf = new Votingfunctions();
-  
+   /* 
+   VotingFunctions vf = new VotingFunctions();
+   vf.setUpVotes(tVotes);
+   newNumVotes = vf.i_upvotes();
   */
+  
   
   
 
