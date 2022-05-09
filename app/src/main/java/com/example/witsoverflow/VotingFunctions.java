@@ -1,6 +1,6 @@
-package com.example.witsoverflow;
+package com.example.witsoverflow;      //////sends and gets votes, to be used in any class that instantiates this class
 
-public class VotingFunctions {
+public class VotingFunctions {     
     public int upVotes;
     public int dnVotes;
 
