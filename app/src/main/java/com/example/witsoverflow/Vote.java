@@ -16,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
  
 public class Vote extends AppCompatActivity{
     private ImageButton upVBtn, dnVBtn;
+    private TextView txtUsername;
 
     //variable stores the updated number of votes.
     private  int newNumVotes;
