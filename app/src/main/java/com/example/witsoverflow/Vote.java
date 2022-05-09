@@ -119,6 +119,7 @@ public class Vote extends AppCompatActivity{
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         database.child("Posts").child(Student_num).child("upvote").setValue(newNumVotes);
+                        //database.child("Posts").child(id).child("upvote").setValue(newNumVotes);
                     }
 
                     @Override
@@ -170,6 +171,7 @@ public class Vote extends AppCompatActivity{
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         database.child("Posts").child(Student_num).child("downvote").setValue(newNumVotes);
+                        //database.child("Posts").child(id).child("downvote").setValue(newNumVotes);
                     }
 
                     @Override
