@@ -13,7 +13,7 @@ public class VotingFunctions {
         return upVotes;
     }
 
-    public void setUpVotes(int upVotes) {   //sets the up vote
+    public void setUpVotes(int upVotes) {   //sets the up vote  
         this.upVotes = upVotes;
     }
 
@@ -21,15 +21,15 @@ public class VotingFunctions {
         return dnVotes;
     }
 
-    public void setDnVotes(int dnVotes) {   
+    public void setDnVotes(int dnVotes) {   //sets the down votes
         this.dnVotes = dnVotes;
     }
 
-    public int i_upvotes(){    
+    public int i_upvotes(){    //increaments the up votes 
         return  upVotes+1;
     }
 
-    public int i_downvotes(){   
+    public int i_downvotes(){   //increaments the down vote
         return  dnVotes+1;
     }
 }
