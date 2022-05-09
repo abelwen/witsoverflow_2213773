@@ -65,8 +65,6 @@ public class Vote extends AppCompatActivity{
   
    /* 
    VotingFunctions vf = new VotingFunctions();
-   vf.setUpVotes(tVotes);
-   newNumVotes = vf.i_upvotes();
   */
   
   
@@ -106,6 +104,17 @@ public class Vote extends AppCompatActivity{
                             newNumVotes = AddVote(NoOfUpVts);
 
                         }
+                      
+                     /*  if(snapshot.hasChild(Student_num)){
+                            //student number exist in firebase database
+                            int NoOfUpVts= snapshot.child(Student_num).child("upvote").getValue(Integer.class);
+
+                            vf.setUpVotes(NoOfUpVts);
+                            newNumVotes = vf.i_upvotes();
+
+                        }
+
+                        }*/
                       
                         /*
                         if(snapshot.hasChild(id)){
