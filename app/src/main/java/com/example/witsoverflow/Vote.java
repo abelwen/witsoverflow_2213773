@@ -58,12 +58,13 @@ public class Vote extends AppCompatActivity{
 
         //database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://witsoverflow-c83b5-default-rtdb.europe-west1.firebasedatabase.app/");
         
-
+        //when up vote clicked
         upVBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String Student_num = txtUsername.getText().toString();
 
+                //get number of votes from database
                 database.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -82,10 +83,52 @@ public class Vote extends AppCompatActivity{
                     }
                 });
 
+                //get update number of votes in database
                 database.child("Posts").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         database.child("Posts").child(Student_num).child("upvote").setValue(newNumVotes);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Log.w(TAG, "Failed to Write values.", error.toException());
+                    }
+                });
+
+            }
+        });
+      
+        //when down vote clicked
+        dnVBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String Student_num = txtUsername.getText().toString();
+
+                //get number of votes from database
+                database.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.hasChild(Student_num)){
+                            //student number exist in firebase database
+                            int NoOfUpVts= snapshot.child(Student_num).child("downvote").getValue(Integer.class);
+
+                            newNumVotes = AddVote(NoOfUpVts);
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Log.w(TAG, "Failed to read value.", error.toException());
+                    }
+                });
+
+                //get update number of votes in database
+                database.child("Posts").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        database.child("Posts").child(Student_num).child("downvote").setValue(newNumVotes);
                     }
 
                     @Override
