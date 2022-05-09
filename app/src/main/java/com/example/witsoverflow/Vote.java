@@ -16,7 +16,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
  
 public class Vote extends AppCompatActivity{
     private ImageButton upVBtn, dnVBtn;
-    private 
 
     //variable stores the updated number of votes.
     private  int newNumVotes;
@@ -25,8 +24,7 @@ public class Vote extends AppCompatActivity{
     private FirebaseFirestore db;
 
     public int AddVote(int numVotes){
-        int tVotes=0;
-        tVotes = numVotes + 1;
+        int tVotes = numVotes + 1;
         return tVotes;
     }
 
