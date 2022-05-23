@@ -48,3 +48,42 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return list.size();
     }
+     public static class MyViewHolder extends RecyclerView.ViewHolder{
+
+        TextView post, username, up, down;
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            username = itemView.findViewById(R.id.userName);
+            post = itemView.findViewById(R.id.post);
+            up = itemView.findViewById(R.id.upVoteNo);
+            down = itemView.findViewById(R.id.downVoteNo);
+
+            post.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(view.getContext(), opened_post.class);
+                    i.putExtra("Stud_Num",username.getText());
+                    i.putExtra("post",post.getText());
+                    view.getContext().startActivity(i);
+                    //System.out.println(post.getText());
+                }
+            });
+            username.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(view.getContext(), opened_post.class);
+                    i.putExtra("Stud_Num",username.getText());
+                    i.putExtra("post",post.getText());
+                    view.getContext().startActivity(i);
+                    //System.out.println(username.getText());
+                }
+            });
+        }
+    }
+
+
+}
+
+    
+    
