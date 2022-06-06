@@ -21,6 +21,8 @@ Features
 * A plus button that redirects to a page where you can create a post
 * Voting on a post
 * Sorting A Post
+* Reporting a post 
+* Deleting reported posts 
  
  Installation Process
  * Click and run the APK File
@@ -35,3 +37,7 @@ Features
  * When you click the plus button, you will be redirected to a new page where you can create posts.
  * When you click the up/down buttons on a post , you will change the number of up/down votes that post has
  * When you click the sort button, you will be able to sort the listed posts
+ * When you click on the report button, you will be able to state a reason for reporting the post
+ * When the admin clicks the report list button. they will be able to see a list of the reported posts by the student users
+ * After viewing the list of reported posts, the admin can choose to delete or keep this post.
+ * If the admin deletes a reported post, it should not be visible to the student user anymore.
