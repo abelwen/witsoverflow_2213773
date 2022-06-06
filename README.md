@@ -7,7 +7,7 @@ In this project we will be designing and implementing an online forum for the sc
 Answer and ask questions
 Comment on questions and answers
 Vote on questions and answers
-Mark answers as correct ( question asker)
+Mark answers as correct (question asker)
 Moderate asnwers and questions ( moderator)
 Earn acheivemenrs for participating in the forum
 
@@ -20,8 +20,9 @@ Features
 * A home page where they can view all the posts created
 * A plus button that redirects to a page where you can create a post
 * Voting on a post
-* Sorting A Post
+* Sorting the list of posts
 * Reporting a post 
+* A report list button that redirects the admin to a page where they can view a list of post 
 * Deleting reported posts 
  
  Installation Process
